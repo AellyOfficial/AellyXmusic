@@ -20,7 +20,7 @@ async def repo(client, m: Message):
 🔰 Telegram UserBot To Play Songs And Videos In Telegram Voice Chat.
 
 👩‍💻 Owe by 
-• [Aelly](https://t.me/an_unic_or_n47)
+• [Aelly](https://t.me/anu_pi)
 
 📝 Requirements
 • Python 3.8+
