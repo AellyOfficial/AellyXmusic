@@ -36,23 +36,23 @@
 
 
 ```
-1• git clone https://github.com/AellyOfficial/AellyXmusic
+git clone https://github.com/AellyOfficial/AellyXmusic
 ```
 ```
-2• cd AellyXmusic
+cd AellyXmusic
 ```
 ```
-3• pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 ```
-4• nano .env
+nano .env
 ```
  Edit your Vars here , Save type```ctrl S + Ctrl X```
 ```
-5• screen -S AellyXmusic
+screen -S AellyXmusic
 ```
 ```
-6• To run type python3 main.py
+To run type python3 main.py
 ```
 
 ## 🛠 Commands:
