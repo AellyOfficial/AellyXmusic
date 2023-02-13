@@ -1,4 +1,6 @@
 import asyncio
+from pyrogram import Client, idle
+from pytgcalls import PyTgCalls
 from pytgcalls import idle
 from config import call_py, bot
 
