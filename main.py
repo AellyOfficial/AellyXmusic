@@ -1,5 +1,5 @@
 import asyncio
-from pyrogram import idle
+from pytgcalls import idle
 from config import call_py, bot
 
 
