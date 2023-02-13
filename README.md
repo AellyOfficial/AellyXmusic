@@ -45,6 +45,9 @@ cd AellyXmusic
 pip3 install -r requirements.txt
 ```
 ```
+mv sample.env .env
+```
+```
 nano .env
 ```
  Edit your Vars here , Save type```ctrl S + Ctrl X```
@@ -52,7 +55,7 @@ nano .env
 screen -S AellyXmusic
 ```
 ```
-To run type python3 main.py
+python3 main.py
 ```
 
 ## 🛠 Commands:
