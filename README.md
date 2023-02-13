@@ -34,6 +34,11 @@
 
 <h4>Deploy Vps</h4>
 
+```
+bash
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
 ```
 git clone https://github.com/AellyOfficial/AellyXmusic
@@ -45,7 +50,7 @@ cd AellyXmusic
 pip3 install -r requirements.txt
 ```
 ```
-mv sample.env .env
+mv sample_config.env .env
 ```
 ```
 nano .env
