@@ -17,18 +17,20 @@ from config import HNDLR, bot, call_py
 from AellyXmusic.helpers.queues import QUEUE, add_to_queue, get_queue
 
 AMBILFOTO = [
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
-    "https://telegra.ph/file/613f681a511feb6d1b186.jpg",
+    "https://te.legra.ph//file/4f848bc6241d3d0d102a4.jpg",
+    "https://te.legra.ph//file/4eea09e5c1d1b24c482f1.jpg",
+    "https://te.legra.ph//file/ed3ce4aaa98a067cbb5cf.jpg",
+    "https://te.legra.ph//file/53b05316855dddc2905ed.jpg",
+    "https://te.legra.ph//file/f263b8db1d2d3ce730da4.jpg",
+    "https://te.legra.ph//file/81a7bc189d6991b8a72f9.jpg",
+    "https://te.legra.ph//file/32f001e5e781da1634c60.jpg",
+    "https://te.legra.ph//file/d7727950966680f22aa98.jpg",
+    "https://te.legra.ph//file/04ec0b973cbb57af01f7e.jpg",
+    "https://te.legra.ph//file/663bee83808d3b7e26559.jpg",
+    "https://te.legra.ph//file/3c2de51ace094867a2b88.jpg",
+    "https://te.legra.ph//file/09cb375e560f108a147a9.jpg",
+    "https://te.legra.ph/file/f6bc459cbca6d6d9bd431.jpg",
+    "https://te.legra.ph/file/9b97db9da19a5ed703a84.jpg",
 ]
 
 IMAGE_THUMBNAIL = random.choice(AMBILFOTO)
