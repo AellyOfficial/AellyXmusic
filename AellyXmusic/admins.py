@@ -87,4 +87,4 @@ async def resume(client, m: Message):
         except Exception as e:
             await m.reply(f"**ᴇʀʀᴏʀ** \n`{e}`")
     else:
-        await m.reply("**❌ ɴᴏᴛʜɪɴ ɪs ᴘʟᴀʏɪɴɢ ᴄᴜʀʀᴇɴᴛʟʏ!**")
+        await m.reply("**❌ ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴄᴜʀʀᴇɴᴛʟʏ!**")
