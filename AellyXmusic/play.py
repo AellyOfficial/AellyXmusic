@@ -124,7 +124,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**✧ Processing Request...**")
+            huehue = await replied.reply("**✧ ᴘʀᴏᴄᴇssɪɴɢ ʀᴇϙᴜᴇsᴛ...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -143,11 +143,11 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Song In Queue ** `{pos}`
-🏷 **Title:** [{songname}]({link})
-⏱️ **Duration:** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Request:** {m.from_user.mention}
+**⌲ sᴏɴɢ ɪɴ ϙᴜᴇᴜᴇ ** `{pos}`
+👀 **ᴛɪᴛʟᴇ:** [{songname}]({link})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **Request:** {m.from_user.mention}
 """,
                 )
             else:
@@ -164,31 +164,31 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Start Playing Song**
-🏷 **Title:** [{songname}]({link})
-⏱️ **Duration:** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Upon request:** {m.from_user.mention}
+**⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ**
+👀 **ᴛɪᴛʟᴇ:** [{songname}]({link})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **upon request:** {m.from_user.mention}
 """,
                 )
 
     else:
         if len(m.command) < 2:
-            await m.reply("Reply to Audio File or give something for Search")
+            await m.reply("ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏғ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ғᴏʀ sᴇᴀʀᴄʜ")
         else:
             await m.delete()
-            huehue = await m.reply("**✧ Searching For Songs... Please Be Patient**")
+            huehue = await m.reply("**✧ sᴇᴀʀᴄʜɪɴɢ ғᴏʀ sᴏɴɢ...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await huehue.edit("`Found Nothing for Given Query`")
+                await huehue.edit("`ғᴏᴜɴᴅ ɴᴏᴛʜɪɴ ғᴏʀ ɢɪᴠᴇɴ ϙᴜᴇʀʏ`")
             else:
                 songname = search[0]
                 url = search[1]
                 duration = search[2]
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**YTDL ERROR âš ï¸** \n\n`{ytlink}`")
+                    await huehue.edit(f"**ʏᴛᴅʟ ᴇʀʀᴏʀ ï¸** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
@@ -197,11 +197,11 @@ async def play(client, m: Message):
                         await m.reply_photo(
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
-**▶ Song In Queue ** `{pos}`
-🏷 **Title:** [{songname}]({url})
-⏱️ **Duration:** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Upon request:** {m.from_user.mention}
+**⌲ sᴏɴɢ ɪɴ ϙᴜᴇᴜᴇ ** `{pos}`
+👀 **ᴛɪᴛʟᴇ:** [{songname}]({url})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **upon request:** {m.from_user.mention}
 """,
                         )
                     else:
@@ -219,11 +219,11 @@ async def play(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{IMAGE_THUMBNAIL}",
                                 caption=f"""
-**▶ Start Playing Song**
-🏷️ **Title:** [{songname}]({url})
-⏱️ **Duration** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Upon request:** {m.from_user.mention}
+**⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ**
+👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **upon request:** {m.from_user.mention}
 """,
                             )
                         except Exception as ep:
@@ -238,7 +238,7 @@ async def videoplay(client, m: Message):
     if replied:
         if replied.video or replied.document:
             await m.delete()
-            huehue = await replied.reply("**✧ Processing Videos....**")
+            huehue = await replied.reply("**✧ ᴘʀᴏᴄᴇssɪɴɢ ᴠɪᴅᴇᴏ....**")
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
@@ -250,7 +250,7 @@ async def videoplay(client, m: Message):
                 else:
                     Q = 720
                     await huehue.edit(
-                        "`Only 720, 480, 360 Allowed` \n`Now streaming in 720p`"
+                        "`Only 720, 480, 360 ᴀʟʟᴏᴡᴇᴅ` \n`ɴᴏᴡ sᴛᴇʀᴇᴀᴍɪɴɢ ɪɴ 720p`"
                     )
             try:
                 if replied.video:
@@ -267,10 +267,10 @@ async def videoplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Videos In Queue {pos}
-🏷️ Title: [{songname}]({link})
-💡 Status: Playing
-🎧 Upon request: {m.from_user.mention}**
+**⌲ ᴠɪᴅᴇᴏ ɪɴ ᴏᴜᴇᴜᴇ {pos}
+👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
+💕 sᴛᴀᴛᴜs: Playing
+😌 upon request: {m.from_user.mention}**
 """,
                 )
             else:
@@ -291,28 +291,28 @@ async def videoplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Start Playing Video
-🏷️ Title: [{songname}]({link})
-💡 Status: Playing
-🎧 Upon request: {m.from_user.mention}**
+**⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ
+👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
+💕 sᴛᴀᴛᴜs: Playing
+😌 upon request: {m.from_user.mention}**
 """,
                 )
 
     else:
         if len(m.command) < 2:
             await m.reply(
-                "**Reply to Audio File or give something for Search**"
+                "**ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴ ғᴏʀ sᴇsʀᴄʜ**"
             )
         else:
             await m.delete()
-            huehue = await m.reply("**ðŸ”Ž Song Search... Please Be Patient**")
+            huehue = await m.reply("**sᴇᴀʀᴄʜɪɴɢ sᴏɴɢ.. ᴘʟᴇᴀsᴇ ʙᴇ ᴘᴀᴛɪᴇɴᴛ**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
             hmmm = HighQualityVideo()
             if search == 0:
                 await huehue.edit(
-                    "**Found Nothing for Given Query**"
+                    "**ғᴏᴜɴᴅ ɴᴏᴛʜɪɴɢ ғᴏʀ ϙᴜᴇʀʏ**"
                 )
             else:
                 songname = search[0]
@@ -320,7 +320,7 @@ async def videoplay(client, m: Message):
                 duration = search[2]
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**YTDL ERROR âš ï¸** \n\n`{ytlink}`")
+                    await huehue.edit(f"**ʏᴛᴅʟ ᴇʀʀᴏʀ¸** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
@@ -329,11 +329,11 @@ async def videoplay(client, m: Message):
                         await m.reply_photo(
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
-**▶ Videos In Queue** `{pos}`
-🏷️ **Title:** [{songname}]({url})
-⏱️ **Duration:** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Upon request:** {m.from_user.mention}
+**⌲ ᴠɪᴅᴇᴏ ɪɴ ϙᴜᴇᴜᴇ** `{pos}`
+👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **upon request:** {m.from_user.mention}
 """,
                         )
                     else:
@@ -349,11 +349,11 @@ async def videoplay(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{IMAGE_THUMBNAIL}",
                                 caption=f"""
-**▶ Start Playing Video**
-🏷️ **Title:** [{songname}]({url})
-⏱️ **Duration:** `{duration}`
-💡 **Status:** `Playing`
-🎧 **Upon request:** {m.from_user.mention}
+**⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ**
+👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
+🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
+💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
+😌 **upon request:** {m.from_user.mention}
 """,
                             )
                         except Exception as ep:
@@ -377,7 +377,7 @@ async def playfrom(client, m: Message):
             limit = 10
             lmt = 9
         await m.delete()
-        hmm = await m.reply(f"**✧ Take {limit} Random Song From {chat}**")
+        hmm = await m.reply(f"**✧ ᴛᴀᴋᴇ {limit} ʀᴀɴᴅᴏᴍ sᴏɴɢ ғᴏʀᴍ {chat}**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -399,18 +399,18 @@ async def playfrom(client, m: Message):
                     await m.reply_photo(
                         photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                         caption=f"""
-**▶ Start Playing Songs From {chat}
-🏷️ Title: [{songname}]({link})
-💡 Status: Playing
-🎧 Upon request: {m.from_user.mention}**
+**⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ ғʀᴏᴍ {chat}
+👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
+💕 sᴛᴀᴛᴜs: Playing
+😌 upon request: {m.from_user.mention}**
 """,
                     )
             await hmm.delete()
             await m.reply(
-                f"âž• Adding {lmt} Songs To Queue\nâ€¢ Click {HNDLR}playlist To View Playlist**"
+                f"âž• ᴀᴅᴅɪɴɢ {lmt} sᴏɴɢ ᴛᴏ ϙᴜᴇᴜᴇ\nâ€¢ ᴄʟʟɪᴄᴋ {HNDLR}ᴛᴏ ᴠɪᴇᴡ ᴘʟᴀʏʟɪsᴛ**"
             )
         except Exception as e:
-            await hmm.edit(f"**ERROR** \n`{e}`")
+            await hmm.edit(f"**ᴇʀʀᴏʀ** \n`{e}`")
 
 
 @Client.on_message(filters.command(["playlist", "queue"], prefixes=f"{HNDLR}"))
@@ -421,11 +421,11 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**✧ NOW PLAYING:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**✧ ɴᴏᴡ ᴘʟᴀʏɪɴɢ:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
-            QUE = f"**✧ NOW PLAYING:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**â¯ QUEUE LIST:**"
+            QUE = f"**✧ ɴᴏᴡ ᴘʟᴀʏɪɴɢ:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**â¯ QUEUE LIST:**"
             l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
@@ -434,4 +434,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**✧ Not Playing Anything...**")
+        await m.reply("**✧ ɴᴏᴛ ᴘʟᴀʏɪɴɢ ᴀɴᴜᴛʜɪɴɢ...**")
