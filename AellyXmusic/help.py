@@ -12,25 +12,25 @@ from config import HNDLR, SUDO_USERS
 async def help(client, m: Message):
     await m.delete()
     HELP = f"""
-<b>👋 Hoi {m.from_user.mention}!
+<b>👋ʜᴏɪ {m.from_user.mention}!
 
-🛠 MUSIC PLAYER HELP MENU
+🛠 ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
-⚡ COMMANDS FOR EVERYONE
-• {HNDLR}play [song title | youtube link | reply audio file] - to play the song
-• {HNDLR}videoplay [video title | youtube link | reply video file] - to play video
-• {HNDLR}playlist to view playlist
-• {HNDLR}ping - to check status
-• {HNDLR}id - to see user id
-• {HNDLR}video - video title | youtube link to search video
-• {HNDLR}song - song title | youtube link to search for songs
-• {HNDLR}help - to see a list of commands
-• {HNDLR}join- to join | to group 
+⚡ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴇᴠᴇʀʏᴏɴᴇ
+• {HNDLR}ᴘʟᴀʏ [sᴏɴɢ ᴛɪᴛʟᴇ | ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ | ʀᴇᴘʟʏ ᴀᴜᴅɪᴏ ғɪʟᴇ] - ᴛᴏ ᴘʟᴀʏ ᴛʜᴇ sᴏɴɢ
+• {HNDLR}ᴠɪᴅᴇᴏᴘʟᴀʏ [ᴠɪᴅᴇᴏ ᴛɪᴛʟᴇ | ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ | ʀᴇᴘʟʏ ᴠɪᴅᴇᴏ ғɪʟᴇ] - ᴛᴏ ᴘʟᴀʏ ᴠɪᴅᴇᴏ
+• {HNDLR}ᴘʟᴀʏʟɪsᴛ ᴛᴏ ᴠɪᴇᴡ ᴘʟᴀʏʟɪsᴛ
+• {HNDLR}ᴘɪɴɢ - ᴛᴏ ᴄʜᴇᴄᴋ sᴛᴀᴛᴜs
+• {HNDLR}ɪᴅ - ᴛᴏ sᴇᴇ ᴜsᴇʀ ɪᴅ
+• {HNDLR}ᴠɪᴅᴇᴏ - ᴠɪᴅᴇᴏ ᴛɪᴛʟᴇ | ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴛᴏ sᴇᴀʀᴄʜ ᴠɪᴅᴇᴏ
+• {HNDLR}sᴏɴɢ - sᴏɴɢ ᴛɪᴛʟᴇ | ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴛᴏ sᴇᴀʀᴄʜ ғᴏʀ sᴏɴɢs
+• {HNDLR}ʜᴇʟᴘ - ᴛᴏ sᴇᴇ ᴀ ʟɪsᴛ ᴏғ ᴄᴏᴍᴍᴀɴᴅs
+• {HNDLR}ᴊᴏɪɴ- ᴛᴏ ᴊᴏɪɴ | ᴛᴏ ɢʀᴏᴜᴘ 
 
-⚡ COMMANDS FOR ALL ADMINS
-• {HNDLR}resume - to continue playing a song or video
-• {HNDLR}pause - to pause the playback of a song or video
-• {HNDLR}skip - to skip songs or videos
-• {HNDLR}end - to end playback</b>
+⚡ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴀʟʟ ᴀᴅᴍɪɴs
+• {HNDLR}ʀᴇsᴜᴍᴇ - ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ ᴘʟᴀʏɪɴɢ ᴀ sᴏɴɢ ᴏʀ ᴠɪᴅᴇᴏ
+• {HNDLR}ᴘᴀᴜsᴇ - ᴛᴏ ᴘᴀᴜsᴇ ᴛʜᴇ ᴘʟᴀʏʙᴀᴄᴋ ᴏғ ᴀ sᴏɴɢ ᴏʀ ᴠɪᴅᴇᴏ
+• {HNDLR}sᴋɪᴘ - ᴛᴏ sᴋɪᴘ sᴏɴɢs ᴏʀ ᴠɪᴅᴇᴏs
+• {HNDLR}ᴇɴᴅ - ᴛᴏ ᴇɴᴅ ᴘʟᴀʏʙᴀᴄᴋ</ʙ>
 """
     await m.reply(HELP)

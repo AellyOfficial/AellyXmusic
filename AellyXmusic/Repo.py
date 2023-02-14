@@ -13,27 +13,25 @@ from config import HNDLR, SUDO_USERS
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
-<b>👋 Hoi {m.from_user.mention}!
+<b>👋 ʜᴏɪ {m.from_user.mention}!
 
-🗃️ Music And Video Player UserBot
+🗃️ ᴍᴜsɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴘʟᴀʏᴇʀ ᴜsᴇʀʙᴏᴛ
 
-🔰 Telegram UserBot To Play Songs And Videos In Telegram Voice Chat.
+🔰 ᴛᴇʟᴇɢʀᴀᴍ ᴜsᴇʀʙᴏᴛ ᴛᴏ ᴘʟᴀʏ sᴏɴɢs ᴀɴᴅ ᴠɪᴅᴇᴏs ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
 
-👩‍💻 Owe by 
-• [Aelly](https://t.me/anu_pi)
+👩‍💻 ᴏᴡᴇ ʙʏ 
+• [ᴀᴇʟʟʏ](https://t.me/anu_pi)
 
-📝 Requirements
-• Python 3.8+
-• FFMPEG
-• Nodejs v16+
+📝 ʀᴇϙᴜɪʀᴇᴍᴇɴᴛs
+• ᴘʏᴛʜᴏɴ 3.8+
+• ғғᴍᴘᴇɢ
+• ɴᴏᴅᴇᴊs ᴠ16+
 
-[Anu](https://t.me/an_unic_or_n47)
-
-📝 Required Variables
-• `API_ID` - Get From [my.telegram.org](https://my.telegram.org)
-• `API_HASH` - Get From [my.telegram.org](https://my.telegram.org)
-• `SESSION` - Pyrogram String Session.
-• `SUDO_USER` -Telegram Account ID Used As Admin
-• `HNDLR` - Handler to run your userbot
+📝 ʀᴇϙᴜɪʀᴇᴅ ᴠᴀʀɪᴀʙʟᴇs
+• `ᴀᴘɪ_ɪᴅ` - ɢᴇᴛ ғʀᴏᴍ [ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ](ʜᴛᴛᴘs://ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ)
+• `ᴀᴘɪ_ʜᴀsʜ` - ɢᴇᴛ ғʀᴏᴍ [ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ](ʜᴛᴛᴘs://ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ)
+• `sᴇssɪᴏɴ` - ᴘʏʀᴏɢʀᴀᴍ sᴛʀɪɴɢ sᴇssɪᴏɴ.
+• `sᴜᴅᴏ_ᴜsᴇʀ` -ᴛᴇʟᴇɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ ɪᴅ ᴜsᴇᴅ ᴀs ᴀᴅᴍɪɴ
+• `ʜɴᴅʟʀ` - ʜᴀɴᴅʟᴇʀ ᴛᴏ ʀᴜɴ ʏᴏᴜʀ ᴜsᴇʀʙᴏᴛ
 """
     await m.reply(REPO, disable_web_page_preview=True)

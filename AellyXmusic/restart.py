@@ -21,6 +21,6 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ Music Userbot Restarted**")
+    await loli.edit("**🥀 ᴍᴜsɪᴄ ᴜsᴇʀʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()

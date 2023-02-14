@@ -13,13 +13,13 @@ async def join(client, message):
     try:
         link = await client.export_chat_invite_link(chat_id)
     except BaseException:
-        await message.reply("**Error:**\nAdd me as your group admin!")
+        await message.reply("**ᴇʀʀᴏʀ:**\nᴀᴅᴅ ᴍᴇ ᴀs ʏɪᴜʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ!")
         return
     try:
         await USER.join_chat(link)
-        await message.reply("**Userbot Joined**")
+        await message.reply("**ᴜsᴇʀʙᴏᴛ ᴊᴏɪɴ*")
     except UserAlreadyParticipant:
-        await message.reply("**Userbot Already joined here**")
+        await message.reply("**ᴜsᴇʀʙᴏᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ**")
 
 
 @Client.on_message(filters.command(["openvcs"], prefixes=f"{HNDLR}"))
@@ -40,5 +40,5 @@ async def opengc(client, message):
         )
     except Exception:
         await message.reply(
-            "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
+            "**ᴇʀʀᴏʀ:** ᴀᴅᴅ ᴜsᴇʀʙᴏᴛ ʏᴏᴜ ʏᴏᴜʀ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ ᴡɪᴛʜ ᴘᴇʀᴍɪssɪᴏɴs **ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜᴛ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**"
         )

@@ -20,10 +20,10 @@ async def song(client, message: Message):
     if not urlissed:
         await client.send_message(
             message.chat.id,
-            "Invalid Command Syntax Please Check Help Menu To Know More!",
+            "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ sʏɴᴛᴀx ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ᴍᴇɴᴜ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ",
         )
         return
-    pablo = await client.send_message(message.chat.id, f"**🔎Searching for a song** `{urlissed}`")
+    pablo = await client.send_message(message.chat.id, f"**🔎sᴇᴀʀᴄʜɪɴɢ ғᴏʀ sᴏɴɢ** `{urlissed}`")
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
     mi = search.result()
     mio = mi["search_result"]
@@ -58,12 +58,12 @@ async def song(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(mo, download=True)
     except Exception as e:
-        await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
+        await pablo.edit(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ** \n**ᴇʀʀᴏʀ :** `{str(e)}`")
         return
     c_time = time.time()
     capy = f"""
-**❤️‍🔥 Song Name:** [{thum}]({mo})
-**🗃️ Request from:** {message.from_user.mention}
+**❤️‍🔥 sᴏɴɢ ɴᴀᴍᴇ:** [{thum}]({mo})
+**🗃️ ʀᴇϙᴜᴇsᴛ ғʀᴏᴍ:** {message.from_user.mention}
 """
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
@@ -78,7 +78,7 @@ async def song(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**Downloading Songs 📥** `{urlissed}`",
+            f"**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢ 📥** `{urlissed}`",
             file_stark,
         ),
     )
@@ -135,7 +135,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**File Name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**ғɪʟᴇ ɴᴀᴍᴇ:** `{}`\n{}".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -193,11 +193,11 @@ def time_formatter(milliseconds: int) -> str:
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
     tmp = (
-        ((str(days) + " day(s), ") if days else "")
-        + ((str(hours) + " hour(s), ") if hours else "")
-        + ((str(minutes) + " minute(s), ") if minutes else "")
-        + ((str(seconds) + " second(s), ") if seconds else "")
-        + ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
+        ((str(days) + " ᴅᴀʏ(s), ") if days else "")
+        + ((str(hours) + " ʜᴏᴜʀ(s), ") if hours else "")
+        + ((str(minutes) + " ᴍɪɴᴜᴛᴇs(s), ") if minutes else "")
+        + ((str(seconds) + " sᴇᴄᴏɴᴅ(s), ") if seconds else "")
+        + ((str(milliseconds) + " ᴍɪʟʟɪ sᴇᴄᴏᴜɴᴅ(s), ") if milliseconds else "")
     )
     return tmp[:-2]
 
@@ -232,10 +232,10 @@ def time_to_seconds(time):
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
-    pablo = await client.send_message(message.chat.id, f"**🔎 Looking for** `{urlissed}`")
+    pablo = await client.send_message(message.chat.id, f"**🔎 ʟᴏᴏᴋɪɴɢ ғᴏʀ** `{urlissed}`")
     if not urlissed:
         await pablo.edit(
-            "Invalid Command Syntax Please Check Help Menu To Know More!"
+            "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ sʏɴᴛᴀx ᴄʜᴇᴄᴋ ᴍᴇɴᴜ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ!"
         )
         return
 
@@ -266,13 +266,13 @@ async def vsong(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url, download=True)
     except Exception as e:
-        await event.edit(event, f"**Download Failed** \n**Error :** `{str(e)}`")
+        await event.edit(event, f"**ᴅᴏᴡɴʟᴏᴀᴅ ғᴀɪʟᴇᴅ** \n**ᴇʀʀᴏʀ :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**🗃️ Video Name:** [{thum}]({mo})
-**🦹🏻 Request from:** {message.from_user.mention}
+**🗃️ ᴠɪᴅᴇᴏ ɴᴀᴍᴇ:** [{thum}]({mo})
+**🦹🏻 ʀᴇϙᴜᴇsᴛ ғʀᴏᴍ:** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
@@ -286,7 +286,7 @@ async def vsong(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**Downloading Videos 📥** `{urlissed}`",
+            f"**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢ 📥** `{urlissed}`",
             file_stark,
         ),
     )

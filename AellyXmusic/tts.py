@@ -24,10 +24,10 @@ def convert(text):
 @Client.on_message(filters.command(["tts"], prefixes=f"{HNDLR}"))
 async def text_to_speech(_, message: Message):
     if not message.reply_to_message:
-        return await message.reply_text("💡 reply to some texts !")
+        return await message.reply_text("💡 ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇ ᴛᴇxᴛ !")
     if not message.reply_to_message.text:
-        return await message.reply_text("💡 reply to some texts !")
-    m = await message.reply_text("🔁 Processing...")
+        return await message.reply_text("💡 ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇ ᴛᴇxᴛ !")
+    m = await message.reply_text("🔁 ᴘʀᴏᴄᴇssɪɴɢ...")
     text = message.reply_to_message.text
     try:
         loop = get_running_loop()
