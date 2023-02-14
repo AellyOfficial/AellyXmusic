@@ -168,7 +168,7 @@ async def play(client, m: Message):
 👀 **ᴛɪᴛʟᴇ:** [{songname}]({link})
 🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
 💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
-😌 **upon request:** {m.from_user.mention}
+😌 **ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ:** {m.from_user.mention}
 """,
                 )
 
@@ -201,7 +201,7 @@ async def play(client, m: Message):
 👀 **ᴛɪᴛʟᴇ:** [{songname}]({url})
 🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
 💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
-😌 **upon request:** {m.from_user.mention}
+😌 **ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ:** {m.from_user.mention}
 """,
                         )
                     else:
@@ -223,7 +223,7 @@ async def play(client, m: Message):
 👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
 🥶 **ᴅᴜʀᴀᴛɪᴏɴ** `{duration}`
 💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
-😌 **upon request:** {m.from_user.mention}
+😌 **ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ:** {m.from_user.mention}
 """,
                             )
                         except Exception as ep:
@@ -270,7 +270,7 @@ async def videoplay(client, m: Message):
 **⌲ ᴠɪᴅᴇᴏ ɪɴ ᴏᴜᴇᴜᴇ {pos}
 👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
 💕 sᴛᴀᴛᴜs: Playing
-😌 upon request: {m.from_user.mention}**
+😌 ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ: {m.from_user.mention}**
 """,
                 )
             else:
@@ -294,7 +294,7 @@ async def videoplay(client, m: Message):
 **⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ
 👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
 💕 sᴛᴀᴛᴜs: Playing
-😌 upon request: {m.from_user.mention}**
+😌 ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ: {m.from_user.mention}**
 """,
                 )
 
@@ -333,7 +333,7 @@ async def videoplay(client, m: Message):
 👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
 🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
 💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
-😌 **upon request:** {m.from_user.mention}
+😌 **ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ:** {m.from_user.mention}
 """,
                         )
                     else:
@@ -353,7 +353,7 @@ async def videoplay(client, m: Message):
 👀️ **ᴛɪᴛʟᴇ:** [{songname}]({url})
 🥶 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`
 💕 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`
-😌 **upon request:** {m.from_user.mention}
+😌 **ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ:** {m.from_user.mention}
 """,
                             )
                         except Exception as ep:
@@ -402,7 +402,7 @@ async def playfrom(client, m: Message):
 **⌲ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ ғʀᴏᴍ {chat}
 👀️ ᴛɪᴛʟᴇ: [{songname}]({link})
 💕 sᴛᴀᴛᴜs: Playing
-😌 upon request: {m.from_user.mention}**
+😌 ᴜᴘᴏɴ ʀᴇϙᴜᴇsᴛ: {m.from_user.mention}**
 """,
                     )
             await hmm.delete()
