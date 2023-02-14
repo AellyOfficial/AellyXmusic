@@ -14,7 +14,7 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("**❌ ᴛʜᴇʀᴇ ɪs ɴᴏᴛʜɪɴ ɪɴ ᴛʜᴇ ϙᴜᴇᴜᴇ!**")
+            await m.reply("**❌ ᴛʜᴇʀᴇ ɪs ɴᴏᴛʜɪɴɢ ɪɴ ᴛʜᴇ ϙᴜᴇᴜᴇ!**")
         elif op == 1:
             await m.reply("**ᴇᴍᴘᴛʏ ϙᴜᴇᴜᴇ, ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**")
         else:
