@@ -13,3 +13,4 @@ yt-dlp
 python-dotenv
 gTTS
 googletrans==4.0.0rc1
+git+https://github.com/ytdl-patched/yt-dlp
