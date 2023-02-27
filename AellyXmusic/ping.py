@@ -13,10 +13,10 @@ from config import HNDLR, SUDO_USERS
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (
     ("week", 60 * 60 * 24 * 7),
-    ("Hour", 60 * 60 * 24),
-    ("Minutes", 60 * 60),
-    ("Second", 60),
-    ("Milliseconds", 1),
+    ("Day", 60 * 60 * 24),
+    ("Hour", 60 * 60),
+    ("Minutes", 60),
+    ("Seconds", 1),
 )
 
 
