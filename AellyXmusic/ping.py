@@ -52,7 +52,7 @@ async def ping(client, m: Message):
 async def pong(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
-   pong = await m.edit("ᴘɪɴɢɪɴɢ...")
+   pong = await m.reply_text("ᴘɪɴɢɪɴɢ...")
    delta_ping = time() - start
    await pong.edit("❏◈===❏")
    await pong.edit("❏=◈==❏")
