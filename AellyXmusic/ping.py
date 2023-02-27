@@ -12,7 +12,7 @@ from config import HNDLR, SUDO_USERS
 # System Uptime
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (
-    ("week", 60 * 60 * 24 * 7),
+    ("Week", 60 * 60 * 24 * 7),
     ("Day", 60 * 60 * 24),
     ("Hour", 60 * 60),
     ("Minutes", 60),
